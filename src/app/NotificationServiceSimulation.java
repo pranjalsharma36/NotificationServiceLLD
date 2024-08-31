@@ -107,7 +107,7 @@ class NotificationChannelFactory{
         return null;
     }
 }
-
+// This can implement observeeInterface since it has => subscribe, register and notify methods. It is behaving like an observee
 class NotificationService {
     
     private NotificationTypeManager notificationTypeManager;
@@ -142,7 +142,7 @@ class NotificationService {
 }
 
 interface NotificationChannel{
-    
+    // observer => updateUser => it can also behave like an observee 
     public void sendNotification(User user, Message message);
 }
 
